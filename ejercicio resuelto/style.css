@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+
+:root {
+    --background: #FFFFFF;
+    --primary: #FFF3E3;
+    --secondary: #B88E2F;
+    --terciary: #F4F5F7;
+    --text: #3A3A3A;
+}
+
+body {
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+}
+
+#panel {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+}
+
+#iniciarJuego, #reiniciar {
+    padding: 10px;
+    background-color: var(--background);
+    border-radius: 10px;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 150px;
+    height: 50px;
+}
+
+#iniciarJuego:hover, #reiniciar:hover {
+    background-color: var(--primary);
+}
+
+#selectDificultad {
+    padding: 10px;
+    font-weight: 600;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-color: var(--background);
+}
+
+#zonaJugable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80svh;
+    position: relative;
+    text-align: center;
+}
+
+.bicho {
+    width: 50px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.mancha {
+    position: absolute;
+    width: 60px;
+    animation: animacionMancha 1s forwards, desaparecer 7s forwards;
+}
+
+#customAlert {
+    height: 0px;
+    position: absolute;
+    left: 45%;
+    border-radius: 10px;
+    border: 2px solid var(--secondary);
+    border-width: 0px;
+    background-color: var(--background);
+    gap: 20px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.5s;
+    padding: 0px;
+    z-index: 1;
+}
+
+#customAlert.shown {
+    height: 140px;
+    padding: 0px;
+    border-width: 2px;
+}
+
+#puntuacion {
+    font-size: 25px;
+}
+
+@keyframes animacionMancha {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes desaparecer {
+    0% {
+        opacity: 1
+    }
+    90% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 750px) {
+    #panel {
+        flex-direction: column;
+    }
+    #customAlert {
+        left: 20%;
+    }
+    #zonaJugable {
+        height: 65svh;
+    }
+}
