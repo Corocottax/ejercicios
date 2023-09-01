@@ -2,7 +2,7 @@
 
 <br>
 
-<img src="https://res.cloudinary.com/dhp2zuftj/image/upload/v1693556681/practicas%20rtc/whac-a-mole-gif.gif" alt="gif de fondo">
+<img src="https://64.media.tumblr.com/61b42677879a0be38fb2779459b0f456/tumblr_nzv60uVwxB1uo5tbio1_1280.gifv" alt="gif de fondo">
 
 <details>
   <summary>
